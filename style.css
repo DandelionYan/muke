@@ -1,0 +1,408 @@
+/**设置页面总体元素**/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{ margin: 0; padding: 0; }
+.container{width:1200px;}
+fieldset,img{ border: 0; }
+:focus{ outline: 0; }
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{ font-style: normal; font-weight: normal; }
+h1,h2,h3,h4,h5,h6{ font-size: 100%; font-weight: normal; font-family: "Microsoft YaHei"; }
+abbr,acronym{ border: 0; font-variant: normal; }
+code,kbd,samp,tt{ font-size: 100%; }
+input,button,textarea,select{ font-size: 100%; border:none;}
+body {
+  font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+  color: #14191e;
+  min-width: 1200px;
+  background-color: #edeff0;
+}
+ol,ul{ list-style: none; }
+table{ border-collapse: collapse; border-spacing: 0; }
+caption,th{ text-align: left; }
+sup,sub{ font-size: 100%; vertical-align: baseline; }
+:link, :visited, ins{ text-decoration: none; }
+blockquote,q{ quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after{ content: ''; content: none; }
+a:link, a:visited{ color: #5e5e5e;}
+a:hover { color:#c9394a; text-decoration:none;}
+a:active { color: #666;}
+a.hidefocus { outline: none; } 
+button.hidefocus::-moz-focus-inner { border:none; } 
+a:focus {outline:none;-moz-outline:none;} 
+input,textarea {outline:none;} 
+h2 { font-size: 20px; }
+h3 { font-size: 16px; line-height: 32px; }
+h5 { font-size: 14px; line-height: 28px; }
+/*border && padding*/
+
+/***********改变右边滑动条*************/
+::-webkit-scrollbar {
+    width: 10px;
+} 
+
+::-webkit-scrollbar-track {
+    background-color: #121212;
+} 
+
+::-webkit-scrollbar-thumb {
+    background-color: #666;
+    -webkit-border-radius: 1px;
+       -moz-border-radius: 1px;
+         -o-border-radius: 1px;
+            border-radius: 1px;
+} 
+
+::-webkit-scrollbar-button {
+    display: none;
+} 
+
+::-webkit-scrollbar-corner {
+    background-color: #000;
+}
+/**********滑动条结束***************/
+
+
+
+
+	
+
+/*处理视频播放左边的垂直下拉列表*/
+
+
+.accordion {
+ 	width: 100%;
+ 	background: #FFF;
+ 	-webkit-border-radius: 4px;
+ 	-moz-border-radius: 4px;
+ 	border-radius: 4px;
+ }
+
+.accordion .link {
+	cursor: pointer;
+	display: block;
+	padding: 15px 15px 15px 42px;
+	color: #4D4D4D;
+	font-size: 14px;
+	font-weight: 700;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+	border-bottom: 0;
+}
+
+.accordion li i {
+	position: absolute;
+	top: 16px;
+	left: 12px;
+	font-size: 18px;
+	color: #595959;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li i.icon-chevron-down {
+	right: 12px;
+	left: auto;
+	font-size: 16px;
+}
+
+.accordion li.open .link {
+	color: #b63b4d;
+}
+
+.accordion li.open i {
+	color: #b63b4d;
+}
+.accordion li.open i.icon-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+ .submenu {
+ 	display: none;
+ 	background: #1F2727;
+ 	font-size: 14px;
+ }
+
+ .submenu li {
+ 	border-bottom: 1px solid #4b4a5e;
+ }
+
+ .submenu a {
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #d9d9d9;
+ 	padding: 12px;
+ 	padding-left: 42px;
+ 	-webkit-transition: all 0.25s ease;
+ 	-o-transition: all 0.25s ease;
+ 	transition: all 0.25s ease;
+ }
+
+ .submenu a:hover {
+ 	background: #b63b4d;
+ 	color: #FFF;
+ }
+
+/**************评论标题盒子开始*****************/
+.comment{
+	margin-top:20px;
+	border-bottom:#666 1px solid;
+}
+.comment ul{
+	margin:10px 0;
+}
+.comment-box ul li,
+.comment ul li{
+	float:left;
+	margin-right:15px;
+	margin-bottom:10px;
+}
+.comment p{
+	clear:both;
+	padding-bottom:20px;
+	
+}
+
+/**************评论标题盒子结束*****************/
+
+/**************评论详情开始*****************/
+.comment-first{
+}
+.bg{
+	background-color:#CCC;	
+}
+.comment-box{
+	  overflow:hidden;
+	  display: block;	 
+	  border: 1px solid #ccc;
+	  margin-bottom: 20px;
+}
+.comment-box .pic{
+  width: 60px;
+  float: left;
+  margin: 10px 15px;
+  text-align: center;
+  overflow: hidden;
+}
+.comment-box .pic img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #F8F8F8;
+}
+.comment-box p{
+	margin-top:10px;
+}
+.comment-box-content {
+  position: relative;
+  padding: 3px 15px 5px;
+  background: #FCFCFC;
+  margin-left:90px;
+  min-height: 80px;
+}
+
+/**************评论详情结束*****************/
+
+/**************我的关注课程开始*****************/
+.box-left{
+  float:left;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.box-left .dot-progress {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 2;
+  left: 70px;
+  top: 22px;
+  line-height: 80px;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  background:url(../images/dot_program.png) no-repeat left bottom;
+}
+.box-left img {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition:0.4s;
+}
+
+.box-right {
+  overflow: hidden;
+}
+.box-right .span-common {
+  font-size: 12px;
+  color: #99a1a6;
+  padding-right: 10px;
+}
+.box-right .span-mid {
+  border-left: solid 1px #d0d6d9;
+  border-right: solid 1px #d0d6d9;
+  padding-left: 10px;
+}
+.box-right .span-right {
+  padding-left: 10px;
+}
+
+/**************我的关注课程结束*****************/
+
+/**************课程详细页面的开始*****************/
+.course-detail h2{
+	font-size:24px;
+	margin:10px 0;
+}
+.course-chapter h2{
+	font-size:18px;
+	margin-top:15px;
+}
+.chaper-list ul li{
+	margin-left:59px;
+	margin-top:5px;	
+}
+
+/**************课程详细页面的结束*****************/
+
+/**************下拉列表结束*****************/
+
+/**************下拉列表结束*****************/
+
+/**************下拉列表结束*****************/
+
+/**************下拉列表结束*****************/
+/*  首页上放图片上的特效 */
+
+/*图片课程切换时的的特效*/
+ul.display {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+ul.display h3{
+	color: #363d40;
+	line-height: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+.thumb_d span{
+	color: #b4bbbf;
+}
+.thumb_d .profress{
+	display:block;
+	margin-top:8px;
+}
+.thumb_view li{
+	margin-top:20px;
+	width:100%;
+}
+.thumb_view li .photo{
+	margin-right:20px;
+	display:block;
+	overflow:hidden;
+	float:left;
+}
+.thumb_view li .thumb_d{
+	overflow:hidden;
+}
+.thumb_view li p{
+	display:block;
+	margin-bottom:5px;
+}
+
+/*******************/
+.effect-julia{
+	background-color:#FFF;
+	padding-right:20px;
+	overflow:hidden;
+}
+.effect-julia img,
+.grid img{
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.grid:hover img {
+	opacity: 1;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+.effect-julia .photo{
+	position:relative;
+	width:280px; 
+	height160px;
+	overflow:hidden;
+	background: #2f3238;
+}
+.effect-julia h3{
+	font-weight: 900;
+	font-size: 18px;
+}
+.effect-julia:hover img {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+.effect-julia .cover{
+	width: 100%;
+	height: 100%;
+	transition: all 1s;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 4;
+	line-height: 180px;
+	text-align: center;
+}
+.effect-julia .cover a{
+	color:#FFF;
+	font-size:18px;
+	border:1px solid #FFF;
+	border-radius:5px;
+	padding:5px 10px;
+	position:relative;
+	top:50px;
+	opacity:0;
+	transition:all 0.3s;
+}
+.effect-julia .cover a:hover{background:#FFF;color:#333;text-decoration:none;}
+.effect-julia:hover .cover a{text-decoration:none;top:0;opacity:0.9;}
+.effect-julia img{overflow:hidden;position:relative;background:url("../images/alert/loading.gif") no-repeat center center;}
+/*********图片处理特效结束******/
+
+/**专家页面开始**/
+.proficient{
+	background-color:#FFF;
+	overflow:hidden;
+	margin-top:25px;
+}
+.proficient .photo{
+	float:left;
+	margin-right:20px;
+}
+.proficient-right h3{
+	margin-top:10px;
+	font-size:20px;
+	font-weight:500;
+}
+.proficient-right h3 span{
+	margin-left:25px;
+	font-size:18px;
+}
+
+/**专家页面结束**/
